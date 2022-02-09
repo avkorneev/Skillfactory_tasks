@@ -1,4 +1,4 @@
-##############CHANGELOG
+# Noughts and crosses for two players, v0.1
 global field
 global player
 global turns
@@ -26,12 +26,14 @@ def swap_players():  # This function swaps player when needed
         player = 'X'
     turns += 1
 
+
 def initialise_field():  # This function draws game board
     for i in field:
         for j in i:
             print(j, end=" ")
         print('')
     print('\n')
+
 
 def win_condition():  # This function checks if the current player have won. Checking filled row/column/diagonal
     for i in range(4):
