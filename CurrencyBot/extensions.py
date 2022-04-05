@@ -28,7 +28,7 @@ class Conv:
 
         headers = {
             'x-rapidapi-host': "currency-exchange.p.rapidapi.com",
-            'x-rapidapi-key': "031c2a0b2amsh5300b8457a59036p170ee6jsn27de70768800"
+            'x-rapidapi-key': ""
         }
 
         response = requests.request("GET", url, headers=headers)
