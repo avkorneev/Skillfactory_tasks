@@ -1,35 +1,67 @@
 from datetime import datetime
-from django.views.generic import ListView, DetailView
-from .models import User, Post, Postcat, Category, Author, Comment
+
+from django.shortcuts import render
+from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
+from .models import Post
+from django.core.paginator import Paginator
+from .filters import PostFilter
+from .forms import PostForm
+
+
+class PostAdd(CreateView):
+    template_name = 'simpleapp/post_add.html'
+    form_class = PostForm
+
+
+class PostSearch(ListView):
+    model = Post
+    ordering = '-post_datetime'
+    template_name = 'search.html'
+    context_object_name = 'posts'
+
+    def get_context_data(self, **kwargs):
+
+        context = super().get_context_data(**kwargs)
+        context['filter'] = PostFilter(self.request.GET,
+                                       queryset=self.get_queryset())
+
+        context['time_now'] = datetime.utcnow()
+
+        context['hotpost'] = None
+        return context
 
 
 class PostList(ListView):
     model = Post
-    ordering = '-post_datetime'  # Выводим новости в обратном порядке - от новых к старым
+    ordering = '-post_datetime'
     template_name = 'posts.html'
     context_object_name = 'posts'
+    paginate_by = 5
 
-    # Метод get_context_data позволяет нам изменить набор данных,
-    # который будет передан в шаблон.
     def get_context_data(self, **kwargs):
-        # С помощью super() мы обращаемся к родительским классам
-        # и вызываем у них метод get_context_data с теми же аргументами,
-        # что и были переданы нам.
-        # В ответе мы должны получить словарь.
         context = super().get_context_data(**kwargs)
-        # К словарю добавим текущую дату в ключ 'time_now'.
-        context['time_now'] = datetime.utcnow()
-        # Добавим ещё одну пустую переменную,
-        # чтобы на её примере рассмотреть работу ещё одного фильтра.
+        context['filter'] = PostFilter(self.request.GET,
+                                       queryset=self.get_queryset())
         context['hotpost'] = None
-        print(context)
         return context
 
 
 class PostDetail(DetailView):
-    # Модель всё та же, но мы хотим получать информацию по отдельному товару
-    model = Post
-    # Используем другой шаблон — post.html
-    template_name = 'post.html'
-    # Название объекта, в котором будет выбранный пользователем продукт
-    context_object_name = 'post'
+    template_name = 'simpleapp/post_details.html'
+    queryset = Post.objects.all()
+
+
+class PostDelete(DeleteView):
+    template_name = 'simpleapp/post_delete.html'
+    queryset = Post.objects.all()
+    success_url = '/posts/'
+
+
+class PostUpdate(UpdateView):
+    template_name = 'simpleapp/post_add.html'
+    form_class = PostForm
+
+    # метод get_object мы используем вместо queryset, чтобы получить информацию об объекте, который мы собираемся редактировать
+    def get_object(self, **kwargs):
+        id = self.kwargs.get('pk')
+        return Post.objects.get(pk=id)

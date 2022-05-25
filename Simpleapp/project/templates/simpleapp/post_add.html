@@ -1,0 +1,23 @@
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}!
+
+{% load custom_tags %}
+
+
+{% block title %}
+Posts
+{% endblock title %}
+
+{% block content %}
+   <h1>Добавить пост</h1>
+   <h3>{% current_time '%b %d %Y' %}</h3>
+   <h5>Посты незарегистрированных пользователей публикуются от имени <i>Unregistered User</i></h5>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form }}<!-- Теперь нам нужна только готовая форма и кнопка -->
+    <input type="submit" value="Опубликовать">
+</form>
+
+{% endblock content %}

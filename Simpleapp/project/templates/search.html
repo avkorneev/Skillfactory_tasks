@@ -1,0 +1,46 @@
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}!
+{% load custom_tags %}
+
+
+{% block title %}
+Posts
+{% endblock title %}
+
+{% block content %}
+   <h1>Поиск постов</h1>
+   <h3>{% current_time '%b %d %Y' %}</h3>
+
+
+{% if posts %}
+<form method="GET">
+    {{ filter.form }} <!-- Форму от фильтров за нас сделает Django. А вот кнопку, увы придётся делать самому -->
+    <input type="submit" value="Найти">
+</form>
+
+<h1>Найдено</h1>
+       <table>
+           <tr>
+               <td>Номер (для удобства на стадии разработки)</td>
+               <td>Заголовок</td>
+               <td>Дата и время публикации</td>
+               <td>Превью</td>
+               <td>Автор</td>
+           </tr>
+
+           {% for post in filter.qs %}
+           <tr>
+               <td>{{ post.id }}</td>
+               <td>{{ post.post_name | obscene}}</td>   <!-- фильтр бранной речи -->
+               <td>{{ post.post_datetime }}</td>
+               <td>{{ post.preview | obscene}}</td>
+               <td>{{ post.post_to_author.name }}</td>
+           </tr>
+           {% endfor %}
+       </table>
+
+{% else %}
+       <h2>Постов нет!</h2>
+{% endif %}
+{% endblock content %}

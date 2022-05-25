@@ -1,0 +1,14 @@
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}!
+{% load custom_tags %}
+
+{% block title %}
+Post
+{% endblock title %}
+
+{% block content %}
+<h1>{{ post.post_name | obscene }}</h1>
+<h3>{{ post.post_datetime | date:'d M Y' }}</h3>
+<h4>{{ post.post_text | obscene }}</h4>
+{% endblock content %}

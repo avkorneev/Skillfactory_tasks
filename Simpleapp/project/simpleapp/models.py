@@ -82,8 +82,11 @@ class Post(models.Model):
     post_datetime = models.DateTimeField(auto_now_add=True)
     post_type = models.CharField(choices=POST_TYPES, max_length=255, default='ART')
     post_rating = models.IntegerField(default=0)
-    post_to_author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    post_to_author = models.ForeignKey(Author, on_delete=models.CASCADE,default = Author(pk=5)) #мини-костыль - если автора нет, то пост приписывается Unnamed Author
     post_to_postcat = models.ManyToManyField(Category, through='Postcat')
+
+    def get_absolute_url(self):  # добавим абсолютный путь, чтобы после создания нас перебрасывало на страницу с товаром
+        return f'/posts/{self.id}'
 
     def like(self):
         self.post_rating += 1
@@ -94,7 +97,7 @@ class Post(models.Model):
         self.save(update_fields=['post_rating'])
 
     def preview(self):
-        length = 20
+        length = 50
         i = 0
         post_text = ''
         while i <= length and i < len(str(self.post_text)):
