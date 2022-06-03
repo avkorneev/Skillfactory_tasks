@@ -8,7 +8,14 @@ Posts
 {% endblock title %}
 
 {% block content %}
-   <h1>Горячее</h1>
+{% if not user.is_authenticated %}
+<button><a href="/accounts/login"><h1>Авторизоваться</h1></a></button>
+{% endif %}
+{% if user.is_authenticated %}
+<h1>Добрый день, {{request.user.username}} !</h1>
+<button><a href="../cabinet"><h1>Личный кабинет</h1></a></button>
+{% endif %}
+<h1>Горячее</h1>
    <h3>{% current_time '%b %d %Y' %}</h3>
    <h3> {{ hotpost|default_if_none:"Горячего не завезли :( Зато завезли кривую вёрстку!" }} </h3>
    <hr>
@@ -16,7 +23,6 @@ Posts
 
 <h1>Все посты</h1>
 <h1><a href="search">Найти пост</a></h1>
-<h1><a href="add">Добавить пост</a></h1>
 <table>
            <tr>
                <td>Рейтинг</td>
@@ -34,7 +40,8 @@ Posts
                <td>{{ post.post_datetime }}</td>
                <td>{{ post.preview | obscene}}</td>
                <td>{{ post.post_to_author.name }}</td>
-               <td><a href="{% url 'post_delete' post.id %}"><u>Удалить</u></a><h5>   </h5><a href="{% url 'post_add' post.id %}"><u>Редактировать</u></a></td>
+               <!--<td><button><a href="{% url 'post_delete' post.id %}"><u>Удалить</u></a></button></td>
+               <td><button><a href="{% url 'post_add' post.id %}"><u>Редактировать</u></a></button></td>--->
            </tr>
            {% endfor %}
 </table>

@@ -1,0 +1,16 @@
+{% extends "flatpages/default.html" %}
+
+{% block content %}
+<h2>Страница авторизованного пользователя {{request.user.username}}</h2>
+<div><h2>Как насчёт нового поста? </h2></div>
+{% if is_not_author %}
+<button><a href="/cabinet/upgrade/">Хочу быть автором! </a></button>
+{% else %}
+<h2>Вы также известны как автор {{ author.name }}.</h2>
+<button><h3><a href="../cabinet/myposts">Мои посты</a></h3></button>
+<button><h1><a href="../posts/add">Добавить пост</a></h1></button>
+{% endif %}
+<button><h3><a href="../sign/logout/">Выйти</a></h3></button>
+
+
+{% endblock %}

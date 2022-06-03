@@ -1,0 +1,33 @@
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}!
+{% load custom_tags %}
+
+{% block content %}
+<h2>Посты пользователя {{request.user.username}}</h2>
+
+<div>
+<table>
+           <tr>
+               <td>Рейтинг</td>
+               <td>Заголовок</td>
+               <td>Дата и время публикации</td>
+               <td>Превью</td>
+               <td>Автор</td>
+               <td>Действия</td>
+           </tr>
+
+           {% for post in filter %}
+           <tr>
+               <td>{{ post.post_rating }}</td>
+               <td><a href="{% url 'post_details' post.id %}">{{ post.post_name | obscene}}</a></td>   <!-- фильтр бранной речи -->
+               <td>{{ post.post_datetime }}</td>
+               <td>{{ post.preview | obscene}}</td>
+               <td>{{ post.post_to_author.name }}</td>
+               <td><button><a href="{% url 'post_delete' post.id %}"><u>Удалить</u></a></button></td>
+               <td><button><a href="{% url 'post_add' post.id %}"><u>Редактировать</u></a></button></td>
+           </tr>
+           {% endfor %}
+</table>
+    </div>
+{% endblock content %}

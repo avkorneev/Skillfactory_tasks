@@ -12,7 +12,7 @@ Posts
 {% block content %}
    <h1>Добавить пост</h1>
    <h3>{% current_time '%b %d %Y' %}</h3>
-   <h5>Посты незарегистрированных пользователей публикуются от имени <i>Unregistered User</i></h5>
+   <!-----<h5>Посты незарегистрированных пользователей публикуются от имени <i>Unregistered User</i></h5>---->
 
 <form method="POST">
     {% csrf_token %}

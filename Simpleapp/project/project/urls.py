@@ -13,7 +13,10 @@ urlpatterns = [
     path('', redirect_view),
     path('admin/', admin.site.urls),
     path('pages/', include('django.contrib.flatpages.urls')),
-    # Делаем так, чтобы все адреса из нашего приложения (simpleapp/urls.py)
-    # подключались к главному приложению с префиксом products/.
     path('posts/', include('simpleapp.urls')),
+    path('sign/', include('sign.urls')),
+    path('accounts/', include('allauth.urls')),
+    path('cabinet/', include('protect.urls')),
+   # path('upgrade/', include('simpleapp.urls'))
+
 ]
