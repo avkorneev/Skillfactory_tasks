@@ -2,6 +2,13 @@ from django.contrib.auth.models import User
 from django.db import models
 
 
+class Category(models.Model):
+    cat_name = models.CharField(max_length=255, unique=True)
+    cat_subscribers = models.ManyToManyField(User,through='Catsubs')
+
+    def __str__(self):
+        return self.cat_name
+
 
 class Author(models.Model):
     name = models.CharField(max_length=255)
@@ -30,9 +37,17 @@ class Author(models.Model):
         self.rating += new_rating
         self.save()
 
+    def __str__(self):
+        return self.name
 
-class Category(models.Model):
-    cat_name = models.CharField(max_length=255, unique=True)
+
+
+
+
+class Catsubs(models.Model):
+    amount = models.IntegerField(default=1)
+    catsubs_to_subs = models.ForeignKey(User, on_delete=models.CASCADE)
+    catsubs_to_cat = models.ForeignKey(Category, on_delete=models.CASCADE)
 
 
 class Post(models.Model):
@@ -67,11 +82,17 @@ class Post(models.Model):
         post_text += '...'
         return post_text
 
+    #def __str__(self):
+    #    return self.post_name
+
 
 class Postcat(models.Model):
     amount = models.IntegerField(default=1)
     postcat_to_post = models.ForeignKey(Post, on_delete=models.CASCADE)
     postcat_to_cat = models.ForeignKey(Category, on_delete=models.CASCADE)
+
+    #def __str__(self):
+    #    return self.postcat_to_cat
 
 
 class Comment(models.Model):

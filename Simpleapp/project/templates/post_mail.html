@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load custom_filters %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>Новая статья в твоё любимом разделе!</h2>
+<h2>{{ title | obscene }}</h2>
+<h2>Предпросмотр: {{ post | obscene | truncatechars:50 }}</h2>
+<h2>Do you like what you see? ( ͡°͡° ͜ʖ ͡°͡°) </h2>
+    <h2>ССЫЛКА НА ПОСТ {{ link }}</h2>
+</body>
+</html>

@@ -17,6 +17,7 @@ urlpatterns = [
     path('sign/', include('sign.urls')),
     path('accounts/', include('allauth.urls')),
     path('cabinet/', include('protect.urls')),
+    #path('appointments/', include('mails.urls'))
    # path('upgrade/', include('simpleapp.urls'))
 
 ]

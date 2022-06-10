@@ -1,0 +1,19 @@
+{% extends "flatpages/default.html" %}
+
+{% block content %}
+<h2>Ваши текущие подписки</h2>
+{% for sub in usersubs %}
+{{ sub }}<br>
+{% endfor %}
+
+<h2>На что ещё подпишетесь?</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form }}<!-- Теперь нам нужна только готовая форма и кнопка -->
+    <input type="submit" value="Подписаться">
+</form>
+<form action='../unsubscribe/' method='POST'>
+    {% csrf_token %}
+<button type='submit'>ОТПИСАТЬСЯ ОТ ВСЕГО! ПУТИ НАЗАД НЕТ!</button>
+</form>
+{% endblock %}

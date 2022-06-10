@@ -30,7 +30,7 @@ Posts
                <td>Дата и время публикации</td>
                <td>Превью</td>
                <td>Автор</td>
-               <td>Действия</td>
+               <td>Категории</td>
            </tr>
 
            {% for post in posts %}
@@ -39,7 +39,14 @@ Posts
                <td><a href="{% url 'post_details' post.id %}">{{ post.post_name | obscene}}</a></td>   <!-- фильтр бранной речи -->
                <td>{{ post.post_datetime }}</td>
                <td>{{ post.preview | obscene}}</td>
-               <td>{{ post.post_to_author.name }}</td>
+               <td>{{ post.post_to_author }}</td>
+               <td>
+                   <ul>
+                   {% for cat in post.post_to_postcat.all %}
+                        <li>{{ cat }}</li>
+                   {% endfor %}
+                   </ul>
+               </td>
                <!--<td><button><a href="{% url 'post_delete' post.id %}"><u>Удалить</u></a></button></td>
                <td><button><a href="{% url 'post_add' post.id %}"><u>Редактировать</u></a></button></td>--->
            </tr>
