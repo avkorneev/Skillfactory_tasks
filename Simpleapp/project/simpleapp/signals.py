@@ -5,15 +5,15 @@ from django.core.mail import send_mail, EmailMultiAlternatives
 from django.dispatch import receiver
 from django.template.loader import render_to_string
 
-from project.project import settings
-from project.simpleapp.models import Catsubs
-from project.simpleapp.views import PostAdd
 
+from .models import Catsubs, Post, Category, Postcat
+from .views import PostAdd
+from project import settings
 
-@receiver(post_save, sender=PostAdd)
+@receiver(post_save, sender=Post)
 def notify_publication(sender, instance, created, **kwargs):
     if created:
-        print('CREATED')
+
         html_content = render_to_string('post_mail.html',
                                         {'title': instance.post_name, 'post': instance.post_text,
                                          'link': f'{Site.objects.get_current().domain + instance.get_absolute_url()}'})
@@ -28,6 +28,7 @@ def notify_publication(sender, instance, created, **kwargs):
             # здесь указываете почту, с которой будете отправлять (об этом попозже)
             to=maillist  # список получателей уже составлен
         )
+        print('CREATED')
         msg.attach_alternative(html_content, "text/html")  # прикладываем html
         msg.send()  # отправляем
 

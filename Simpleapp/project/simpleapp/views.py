@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.core.mail import send_mail, EmailMultiAlternatives
-from django.http import HttpRequest
+from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 from django.views import View
@@ -14,6 +14,7 @@ from .filters import PostFilter
 from .forms import PostForm, Upgrade
 from django.contrib.auth.models import Group
 from django.conf import settings
+from .tasks import hello, mail_post
 
 
 class PostAdd(PermissionRequiredMixin, LoginRequiredMixin, CreateView):
@@ -21,20 +22,25 @@ class PostAdd(PermissionRequiredMixin, LoginRequiredMixin, CreateView):
     template_name = 'simpleapp/post_add.html'
     form_class = PostForm
 
-    # def post(self, request, *args, **kwargs):   #старая версия post, потом перекинул почту в form_valid
-    #     maillist = []
-    #     for user in Catsubs.objects.filter(catsubs_to_cat = self.request.POST['post_to_postcat']):
-    #         maillist.append(User.objects.get(pk = user.catsubs_to_subs.id).email)
-    #     print(maillist)
-    #     send_mail(
-    #         subject=f'Новый пост на NewsPortal', #{Post.post_datetime("%Y-%M-%d")}
-    #         # имя клиента и дата записи будут в теме для удобства
-    #         message=f'Здравствуй, {self.request.user}! Новая статья в твоём любимом разделе!',  # сообщение с кратким описанием проблемы
-    #         from_email='',  # здесь указываете почту, с которой будете отправлять (об этом попозже)
-    #         recipient_list=maillist  # здесь список получателей. Например, секретарь, сам врач и т. д.
-    #     )
-    #
-    #     return redirect('make_appointment')
+    # эта функция отвечает за отправку письма подписчикам этих категорий. При работе с celery не нужна.
+    def send_mails(self):
+        html_content = render_to_string('post_mail.html',
+                                        {'title': self.object.post_name, 'post': self.object.post_text,
+                                         'link': self.request.build_absolute_uri(
+                                             f'{self.object.id}')})  # выводим html в письмо. build_absolute_uri - для ссылки на пост
+        maillist = []  # список получателей
+        for user in Catsubs.objects.filter(catsubs_to_cat=self.request.POST[
+            'post_to_postcat']):  # перебираем всех юзеров, подписанных на категорию
+            maillist.append(User.objects.get(pk=user.catsubs_to_subs.id).email)  # и закидываем в получателей
+        msg = EmailMultiAlternatives(
+            subject=f'Новый пост на NewsPortal: {self.object.post_name}',  # тема
+            body='',  # тело напишу в html
+            from_email=settings.DEFAULT_FROM_EMAIL,
+            # здесь указываете почту, с которой будете отправлять (об этом попозже)
+            to=maillist  # список получателей уже составлен
+        )
+        msg.attach_alternative(html_content, "text/html")  # прикладываем html
+        msg.send()  # отправляем
 
     def form_valid(self, form):
         max_posts = 3 #максимальное число постов в сутки
@@ -44,23 +50,8 @@ class PostAdd(PermissionRequiredMixin, LoginRequiredMixin, CreateView):
         form.instance.post_to_author = Author.objects.get(author_to_user = User.objects.get(pk=user.id))
         if Post.objects.filter(post_to_author = Author.objects.get(author_to_user = user.id)).filter(post_datetime__gte=day_ago + now).count() < max_posts: #если не превысили максимальное число постов
             self.object = form.save()
-            html_content = render_to_string('post_mail.html',
-                                            {'title': self.object.post_name, 'post': self.object.post_text,
-                                             'link': self.request.build_absolute_uri(
-                                                 f'{self.object.id}')})  # выводим html в письмо. build_absolute_uri - для ссылки на пост
-            maillist = []  # список получателей
-            for user in Catsubs.objects.filter(catsubs_to_cat=self.request.POST[
-                'post_to_postcat']):  # перебираем всех юзеров, подписанных на категорию
-                maillist.append(User.objects.get(pk=user.catsubs_to_subs.id).email)  # и закидываем в получателей
-            msg = EmailMultiAlternatives(
-                subject=f'Новый пост на NewsPortal: {self.object.post_name}',  # тема
-                body='',  # тело напишу в html
-                from_email=settings.DEFAULT_FROM_EMAIL,
-                # здесь указываете почту, с которой будете отправлять (об этом попозже)
-                to=maillist  # список получателей уже составлен
-            )
-            msg.attach_alternative(html_content, "text/html")  # прикладываем html
-            msg.send()  # отправляем
+            mail_post.apply_async([self.object.pk], countdown = 10) #через 10 секунд закидываем id поста в Celery
+            #self.send_mails()
             return redirect('/cabinet/myposts')
         else: #если превысили - ничего не сохранится, и уведомления не придут
             return redirect('/cabinet/myposts')
@@ -150,5 +141,8 @@ class PostUpdate(PermissionRequiredMixin, UpdateView):
         return Post.objects.get(pk=id)
 
 
-
+class TaskView(View):
+    def get(self,request):
+        hello.delay()
+        return HttpResponse('Hello!')
 
