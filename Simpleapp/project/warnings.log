@@ -1,0 +1,2 @@
+2022-07-29 21:33:26,802 /// WARNING /// Not Found: /lalala///C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\venv\lib\site-packages\django\utils\log.py
+2022-07-29 21:33:26,803 /// WARNING /// "GET /lalala HTTP/1.1" 404 2835///C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\venv\lib\site-packages\django\core\servers\basehttp.py

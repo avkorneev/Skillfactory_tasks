@@ -1,0 +1,232 @@
+{asctime} /// {levelname} /// {module} /// {message}
+{asctime} /// {levelname} /// {module} /// {message}
+{asctime} /// {levelname} /// {module} /// {message}
+{asctime} /// {levelname} /// {module} /// {message}
+2022-07-29 21:39:44,057 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 21:39:49,637 /// INFO /// basehttp /// "GET /posts/search HTTP/1.1" 200 4639
+2022-07-29 21:39:51,077 /// INFO /// basehttp /// "GET / HTTP/1.1" 302 0
+2022-07-29 21:39:51,096 /// INFO /// basehttp /// "GET /posts/ HTTP/1.1" 200 5575
+2022-07-29 21:44:04,122 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 21:44:05,663 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 21:44:59,163 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 21:45:00,297 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 21:46:05,200 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 21:46:06,264 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 21:48:00,875 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 21:48:02,165 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 21:48:10,673 /// INFO /// basehttp /// "GET /posts/ HTTP/1.1" 200 5575
+2022-07-29 21:48:12,698 /// INFO /// basehttp /// "GET /accounts/login HTTP/1.1" 301 0
+2022-07-29 21:48:12,746 /// INFO /// basehttp /// "GET /accounts/login/ HTTP/1.1" 200 1600
+2022-07-29 21:48:18,482 /// INFO /// basehttp /// "POST /accounts/login/ HTTP/1.1" 302 0
+2022-07-29 21:48:18,503 /// INFO /// basehttp /// "GET /accounts/confirm-email/ HTTP/1.1" 200 692
+2022-07-29 21:48:58,469 /// INFO /// basehttp /// "GET /accounts/login/ HTTP/1.1" 200 1600
+2022-07-29 21:49:01,831 /// INFO /// basehttp /// "GET /accounts/login/ HTTP/1.1" 200 1600
+2022-07-29 21:49:08,180 /// INFO /// basehttp /// "POST /accounts/login/ HTTP/1.1" 302 0
+2022-07-29 21:49:08,196 /// INFO /// basehttp /// "GET /accounts/confirm-email/ HTTP/1.1" 200 692
+2022-07-29 21:49:14,782 /// INFO /// basehttp /// "GET /admin/ HTTP/1.1" 302 0
+2022-07-29 21:49:14,803 /// INFO /// basehttp /// "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2214
+2022-07-29 21:49:14,877 /// WARNING /// log /// Not Found: /static/admin/css/nav_sidebar.css
+2022-07-29 21:49:14,881 /// WARNING /// basehttp /// "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+2022-07-29 21:49:14,883 /// WARNING /// log /// Not Found: /static/admin/css/base.css
+2022-07-29 21:49:14,910 /// WARNING /// log /// Not Found: /static/admin/css/login.css
+2022-07-29 21:49:14,911 /// WARNING /// log /// Not Found: /static/admin/css/responsive.css
+2022-07-29 21:49:14,912 /// WARNING /// basehttp /// "GET /static/admin/css/base.css HTTP/1.1" 404 179
+2022-07-29 21:49:14,913 /// WARNING /// basehttp /// "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+2022-07-29 21:49:14,915 /// WARNING /// log /// Not Found: /static/admin/js/nav_sidebar.js
+2022-07-29 21:49:14,916 /// WARNING /// basehttp /// "GET /static/admin/css/login.css HTTP/1.1" 404 179
+2022-07-29 21:49:14,920 /// WARNING /// basehttp /// "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+2022-07-29 21:49:19,941 /// INFO /// basehttp /// "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2375
+2022-07-29 21:49:19,995 /// WARNING /// log /// Not Found: /static/admin/css/base.css
+2022-07-29 21:49:19,995 /// WARNING /// log /// Not Found: /static/admin/css/login.css
+2022-07-29 21:49:19,998 /// WARNING /// basehttp /// "GET /static/admin/css/base.css HTTP/1.1" 404 179
+2022-07-29 21:49:19,998 /// WARNING /// basehttp /// "GET /static/admin/css/login.css HTTP/1.1" 404 179
+2022-07-29 21:49:19,998 /// WARNING /// log /// Not Found: /static/admin/css/nav_sidebar.css
+2022-07-29 21:49:19,999 /// WARNING /// log /// Not Found: /static/admin/css/responsive.css
+2022-07-29 21:49:20,000 /// WARNING /// basehttp /// "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+2022-07-29 21:49:20,000 /// WARNING /// basehttp /// "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+2022-07-29 21:49:20,019 /// WARNING /// log /// Not Found: /static/admin/js/nav_sidebar.js
+2022-07-29 21:49:20,019 /// WARNING /// basehttp /// "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+2022-07-29 21:49:32,815 /// INFO /// basehttp /// "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+2022-07-29 21:49:32,864 /// INFO /// basehttp /// "GET /admin/ HTTP/1.1" 200 11148
+2022-07-29 21:49:32,917 /// WARNING /// log /// Not Found: /static/admin/css/dashboard.css
+2022-07-29 21:49:32,917 /// WARNING /// basehttp /// "GET /static/admin/css/dashboard.css HTTP/1.1" 404 179
+2022-07-29 21:49:32,919 /// WARNING /// log /// Not Found: /static/admin/css/base.css
+2022-07-29 21:49:32,919 /// WARNING /// log /// Not Found: /static/admin/css/responsive.css
+2022-07-29 21:49:32,920 /// WARNING /// log /// Not Found: /static/admin/css/nav_sidebar.css
+2022-07-29 21:49:32,920 /// WARNING /// basehttp /// "GET /static/admin/css/base.css HTTP/1.1" 404 179
+2022-07-29 21:49:32,921 /// WARNING /// basehttp /// "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+2022-07-29 21:49:32,921 /// WARNING /// basehttp /// "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+2022-07-29 21:49:32,944 /// WARNING /// log /// Not Found: /static/admin/js/nav_sidebar.js
+2022-07-29 21:49:32,944 /// WARNING /// basehttp /// "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+2022-07-29 21:49:52,155 /// INFO /// basehttp /// "GET /admin/simpleapp/post/ HTTP/1.1" 200 10667
+2022-07-29 21:49:52,214 /// WARNING /// log /// Not Found: /static/admin/css/base.css
+2022-07-29 21:49:52,215 /// WARNING /// basehttp /// "GET /static/admin/css/base.css HTTP/1.1" 404 179
+2022-07-29 21:49:52,217 /// WARNING /// log /// Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+2022-07-29 21:49:52,218 /// WARNING /// log /// Not Found: /static/admin/css/changelists.css
+2022-07-29 21:49:52,219 /// WARNING /// basehttp /// "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+2022-07-29 21:49:52,220 /// WARNING /// basehttp /// "GET /static/admin/css/changelists.css HTTP/1.1" 404 179
+2022-07-29 21:49:52,227 /// WARNING /// log /// Not Found: /static/admin/css/nav_sidebar.css
+2022-07-29 21:49:52,227 /// WARNING /// basehttp /// "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+2022-07-29 21:49:52,233 /// INFO /// basehttp /// "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2022-07-29 21:49:52,254 /// WARNING /// log /// Not Found: /static/admin/css/responsive.css
+2022-07-29 21:49:52,259 /// WARNING /// log /// Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+2022-07-29 21:49:52,260 /// WARNING /// log /// Not Found: /static/admin/js/urlify.js
+2022-07-29 21:49:52,261 /// WARNING /// log /// Not Found: /static/admin/js/core.js
+2022-07-29 21:49:52,262 /// WARNING /// log /// Not Found: /static/admin/js/actions.js
+2022-07-29 21:49:52,262 /// WARNING /// basehttp /// "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+2022-07-29 21:49:52,263 /// WARNING /// basehttp /// "GET /static/admin/js/actions.js HTTP/1.1" 404 179
+2022-07-29 21:49:52,263 /// WARNING /// basehttp /// "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+2022-07-29 21:49:52,264 /// WARNING /// basehttp /// "GET /static/admin/js/core.js HTTP/1.1" 404 179
+2022-07-29 21:49:52,264 /// WARNING /// basehttp /// "GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+2022-07-29 21:49:52,273 /// WARNING /// log /// Not Found: /static/admin/js/prepopulate.js
+2022-07-29 21:49:52,273 /// WARNING /// basehttp /// "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+2022-07-29 21:49:52,275 /// WARNING /// log /// Not Found: /static/admin/js/jquery.init.js
+2022-07-29 21:49:52,275 /// WARNING /// basehttp /// "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+2022-07-29 21:49:52,286 /// WARNING /// log /// Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+2022-07-29 21:49:52,286 /// WARNING /// basehttp /// "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+2022-07-29 21:49:52,306 /// WARNING /// log /// Not Found: /static/admin/js/nav_sidebar.js
+2022-07-29 21:49:52,307 /// WARNING /// basehttp /// "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+2022-07-29 21:49:52,319 /// WARNING /// log /// Not Found: /static/admin/css/responsive.css
+2022-07-29 21:49:52,320 /// WARNING /// basehttp /// "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+2022-07-29 21:49:54,465 /// INFO /// basehttp /// "GET /admin/ HTTP/1.1" 200 11148
+2022-07-29 21:53:34,189 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 21:53:41,407 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 21:53:42,764 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 21:53:45,384 /// INFO /// basehttp /// "GET /admin/ HTTP/1.1" 200 11148
+2022-07-29 21:53:45,447 /// WARNING /// log /// Not Found: /static/admin/css/nav_sidebar.css
+2022-07-29 21:53:45,447 /// WARNING /// basehttp /// "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+2022-07-29 21:53:45,455 /// WARNING /// log /// Not Found: /static/admin/css/base.css
+2022-07-29 21:53:45,455 /// WARNING /// basehttp /// "GET /static/admin/css/base.css HTTP/1.1" 404 179
+2022-07-29 21:53:45,463 /// WARNING /// log /// Not Found: /static/admin/css/dashboard.css
+2022-07-29 21:53:45,464 /// WARNING /// basehttp /// "GET /static/admin/css/dashboard.css HTTP/1.1" 404 179
+2022-07-29 21:53:45,471 /// WARNING /// log /// Not Found: /static/admin/css/responsive.css
+2022-07-29 21:53:45,471 /// WARNING /// basehttp /// "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+2022-07-29 21:53:45,483 /// WARNING /// log /// Not Found: /static/admin/js/nav_sidebar.js
+2022-07-29 21:53:45,484 /// WARNING /// basehttp /// "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+2022-07-29 21:53:46,779 /// INFO /// basehttp /// "GET /admin/ HTTP/1.1" 200 11148
+2022-07-29 21:53:46,836 /// WARNING /// log /// Not Found: /static/admin/css/dashboard.css
+2022-07-29 21:53:46,839 /// WARNING /// log /// Not Found: /static/admin/css/nav_sidebar.css
+2022-07-29 21:53:46,839 /// WARNING /// basehttp /// "GET /static/admin/css/dashboard.css HTTP/1.1" 404 179
+2022-07-29 21:53:46,840 /// WARNING /// basehttp /// "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+2022-07-29 21:53:46,842 /// WARNING /// log /// Not Found: /static/admin/css/base.css
+2022-07-29 21:53:46,843 /// WARNING /// log /// Not Found: /static/admin/css/responsive.css
+2022-07-29 21:53:46,843 /// WARNING /// basehttp /// "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+2022-07-29 21:53:46,844 /// WARNING /// basehttp /// "GET /static/admin/css/base.css HTTP/1.1" 404 179
+2022-07-29 21:53:46,854 /// WARNING /// log /// Not Found: /static/admin/js/nav_sidebar.js
+2022-07-29 21:53:46,854 /// WARNING /// basehttp /// "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+2022-07-29 21:53:49,643 /// INFO /// basehttp /// "GET /admin/logout/ HTTP/1.1" 200 1529
+2022-07-29 21:53:49,699 /// WARNING /// log /// Not Found: /static/admin/css/responsive.css
+2022-07-29 21:53:49,700 /// WARNING /// log /// Not Found: /static/admin/css/base.css
+2022-07-29 21:53:49,701 /// WARNING /// basehttp /// "GET /static/admin/css/base.css HTTP/1.1" 404 179
+2022-07-29 21:53:49,702 /// WARNING /// log /// Not Found: /static/admin/css/nav_sidebar.css
+2022-07-29 21:53:49,703 /// WARNING /// basehttp /// "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+2022-07-29 21:53:49,704 /// WARNING /// basehttp /// "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+2022-07-29 21:53:49,712 /// WARNING /// log /// Not Found: /static/admin/js/nav_sidebar.js
+2022-07-29 21:53:49,713 /// WARNING /// basehttp /// "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+2022-07-29 21:54:00,947 /// INFO /// basehttp /// "GET /admin/ HTTP/1.1" 302 0
+2022-07-29 21:54:00,968 /// INFO /// basehttp /// "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2214
+2022-07-29 21:54:01,019 /// WARNING /// log /// Not Found: /static/admin/css/base.css
+2022-07-29 21:54:01,023 /// WARNING /// log /// Not Found: /static/admin/css/nav_sidebar.css
+2022-07-29 21:54:01,023 /// WARNING /// log /// Not Found: /static/admin/css/login.css
+2022-07-29 21:54:01,024 /// WARNING /// basehttp /// "GET /static/admin/css/login.css HTTP/1.1" 404 179
+2022-07-29 21:54:01,026 /// WARNING /// basehttp /// "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+2022-07-29 21:54:01,026 /// WARNING /// basehttp /// "GET /static/admin/css/base.css HTTP/1.1" 404 179
+2022-07-29 21:54:01,033 /// WARNING /// log /// Not Found: /static/admin/css/responsive.css
+2022-07-29 21:54:01,033 /// WARNING /// basehttp /// "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+2022-07-29 21:54:01,035 /// WARNING /// log /// Not Found: /static/admin/js/nav_sidebar.js
+2022-07-29 21:54:01,035 /// WARNING /// basehttp /// "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+2022-07-29 21:54:02,332 /// INFO /// basehttp /// "GET /admin/logout/ HTTP/1.1" 302 0
+2022-07-29 21:54:02,343 /// INFO /// basehttp /// "GET /admin/ HTTP/1.1" 302 0
+2022-07-29 21:54:02,354 /// INFO /// basehttp /// "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2214
+2022-07-29 21:54:05,989 /// INFO /// basehttp /// "GET / HTTP/1.1" 302 0
+2022-07-29 21:54:06,011 /// INFO /// basehttp /// "GET /posts/ HTTP/1.1" 200 5575
+2022-07-29 21:56:17,230 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 22:02:17,380 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 22:02:17,813 /// INFO /// basehttp /// "GET /admin/logout/ HTTP/1.1" 302 0
+2022-07-29 22:02:17,820 /// INFO /// basehttp /// "GET /admin/ HTTP/1.1" 302 0
+2022-07-29 22:02:17,859 /// INFO /// basehttp /// "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2214
+2022-07-29 22:02:19,150 /// INFO /// basehttp /// "GET /admin/ HTTP/1.1" 302 0
+2022-07-29 22:02:19,160 /// INFO /// basehttp /// "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2214
+2022-07-29 22:02:20,385 /// INFO /// basehttp /// "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2214
+2022-07-29 22:02:24,644 /// INFO /// basehttp /// "GET / HTTP/1.1" 302 0
+2022-07-29 22:02:24,671 /// INFO /// basehttp /// "GET /posts/ HTTP/1.1" 200 5575
+2022-07-29 22:02:29,285 /// WARNING /// log /// Not Found: /posts/lalala
+2022-07-29 22:02:29,320 /// WARNING /// basehttp /// "GET /posts/lalala HTTP/1.1" 404 179
+2022-07-29 22:03:25,527 /// WARNING /// log /// Not Found: /lalaala
+2022-07-29 22:03:25,540 /// WARNING /// basehttp /// "GET /lalaala HTTP/1.1" 404 179
+2022-07-29 22:03:27,312 /// WARNING /// log /// Not Found: /lalaala
+2022-07-29 22:03:27,346 /// WARNING /// basehttp /// "GET /lalaala HTTP/1.1" 404 179
+2022-07-29 22:04:52,099 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 22:04:54,020 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 22:04:54,478 /// WARNING /// log /// Not Found: /lalaala
+2022-07-29 22:04:54,555 /// WARNING /// basehttp /// "GET /lalaala HTTP/1.1" 404 179
+2022-07-29 22:06:03,548 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 22:06:04,843 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 22:10:47,037 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 22:10:48,321 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 22:10:52,402 /// INFO /// basehttp /// "GET /task/1 HTTP/1.1" 200 2576
+2022-07-29 22:13:20,829 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 22:13:22,257 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 22:13:25,308 /// WARNING /// log /// Not Found: /lalaala
+2022-07-29 22:13:25,363 /// WARNING /// basehttp /// "GET /lalaala HTTP/1.1" 404 179
+2022-07-29 22:14:13,897 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 22:14:31,025 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 22:15:36,186 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 22:15:37,664 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 22:16:40,513 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 22:16:41,815 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 22:16:43,991 /// WARNING /// log /// Not Found: /lalaala
+2022-07-29 22:16:44,936 /// WARNING /// basehttp /// "GET /lalaala HTTP/1.1" 404 179
+2022-07-29 22:17:20,590 /// WARNING /// log /// Not Found: /lalaala
+2022-07-29 22:17:21,485 /// WARNING /// basehttp /// "GET /lalaala HTTP/1.1" 404 179
+2022-07-29 22:18:00,389 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 22:18:02,097 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 22:18:02,460 /// WARNING /// log /// Not Found: /lalaala
+2022-07-29 22:18:03,267 /// WARNING /// basehttp /// "GET /lalaala HTTP/1.1" 404 179
+2022-07-29 22:20:11,184 /// WARNING /// log /// Not Found: /lalaala
+2022-07-29 22:20:11,630 /// WARNING /// basehttp /// "GET /lalaala HTTP/1.1" 404 179
+2022-07-29 22:20:20,607 /// WARNING /// log /// Not Found: /postss
+2022-07-29 22:20:20,952 /// WARNING /// basehttp /// "GET /postss HTTP/1.1" 404 179
+2022-07-29 22:20:24,008 /// INFO /// basehttp /// "GET /posts HTTP/1.1" 301 0
+2022-07-29 22:20:24,046 /// INFO /// basehttp /// "GET /posts/ HTTP/1.1" 200 5575
+2022-07-29 22:20:28,280 /// WARNING /// log /// Not Found: /posts/1111
+2022-07-29 22:20:28,699 /// WARNING /// basehttp /// "GET /posts/1111 HTTP/1.1" 404 179
+2022-07-29 22:20:37,580 /// INFO /// basehttp /// "GET /task/3 HTTP/1.1" 200 2587
+2022-07-29 22:20:44,464 /// WARNING /// log /// Not Found: /task/11
+2022-07-29 22:20:44,792 /// WARNING /// basehttp /// "GET /task/11 HTTP/1.1" 404 179
+2022-07-29 22:20:48,539 /// INFO /// basehttp /// "GET /task/2 HTTP/1.1" 200 2576
+2022-07-29 22:20:52,567 /// INFO /// basehttp /// "GET /accounts/login/ HTTP/1.1" 200 1600
+2022-07-29 22:20:54,588 /// INFO /// basehttp /// "GET /task/3 HTTP/1.1" 200 2587
+2022-07-29 22:22:31,045 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 22:22:32,498 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 22:22:36,342 /// WARNING /// log /// Not Found: /posts/111111
+2022-07-29 22:22:37,832 /// WARNING /// basehttp /// "GET /posts/111111 HTTP/1.1" 404 179
+2022-07-29 22:22:47,416 /// INFO /// basehttp /// "GET /posts/1 HTTP/1.1" 200 2576
+2022-07-29 22:26:56,123 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 22:26:57,459 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 22:26:57,982 /// WARNING /// log /// Not Found: /posts/111111
+2022-07-29 22:26:59,544 /// WARNING /// basehttp /// "GET /posts/111111 HTTP/1.1" 404 179
+2022-07-29 22:27:08,226 /// WARNING /// log /// Not Found: /posts/111111
+2022-07-29 22:27:08,923 /// WARNING /// basehttp /// "GET /posts/111111 HTTP/1.1" 404 179
+2022-07-29 22:27:27,484 /// WARNING /// log /// Not Found: /postfffff
+2022-07-29 22:27:28,195 /// WARNING /// basehttp /// "GET /postfffff HTTP/1.1" 404 179
+2022-07-29 22:29:50,736 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 22:29:52,174 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 22:29:52,520 /// WARNING /// log /// Not Found: /postfffff
+2022-07-29 22:29:54,170 /// WARNING /// basehttp /// "GET /postfffff HTTP/1.1" 404 179
+2022-07-29 22:31:41,874 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 22:31:43,425 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 22:31:45,622 /// WARNING /// log /// Not Found: /postfffff
+2022-07-29 22:31:47,220 /// WARNING /// basehttp /// "GET /postfffff HTTP/1.1" 404 179
+2022-07-29 22:32:20,581 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 22:32:21,901 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 22:32:24,261 /// WARNING /// log /// Not Found: /postfffff
+2022-07-29 22:32:28,622 /// WARNING /// basehttp /// "GET /postfffff HTTP/1.1" 404 179
+2022-07-29 22:33:49,351 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 22:33:50,868 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 22:33:53,323 /// WARNING /// log /// Not Found: /postfffff
+2022-07-29 22:33:56,550 /// WARNING /// basehttp /// "GET /postfffff HTTP/1.1" 404 179
+2022-07-29 22:34:19,540 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 22:34:21,054 /// INFO /// autoreload /// Watching for file changes with StatReloader
+2022-07-29 22:35:14,020 /// INFO /// autoreload /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\project\project\settings.py changed, reloading.
+2022-07-29 22:35:15,400 /// INFO /// autoreload /// Watching for file changes with StatReloader

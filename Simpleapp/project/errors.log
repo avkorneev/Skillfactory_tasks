@@ -1,0 +1,4 @@
+2022-07-29 22:07:27,766 /// ERROR /// "GET /lalaala HTTP/1.1" 500 59 /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\venv\lib\site-packages\django\core\servers\basehttp.py /// None
+2022-07-29 22:10:57,440 /// ERROR /// "GET /lalaala HTTP/1.1" 500 59 /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\venv\lib\site-packages\django\core\servers\basehttp.py /// None
+2022-07-29 22:14:32,406 /// ERROR /// "GET /lalaala HTTP/1.1" 500 59 /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\venv\lib\site-packages\django\core\servers\basehttp.py /// None
+2022-07-29 22:15:40,534 /// ERROR /// "GET /lalaala HTTP/1.1" 500 59 /// C:\Users\28252\Documents\GitHub\Skillfactory_tasks\Simpleapp\venv\lib\site-packages\django\core\servers\basehttp.py /// None
